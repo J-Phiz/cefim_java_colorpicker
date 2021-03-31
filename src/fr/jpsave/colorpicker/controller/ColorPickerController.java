@@ -86,7 +86,7 @@ public class ColorPickerController implements Initializable {
                 color.setRed(Integer.parseInt(textFieldRed.textProperty().get()));
             }
             catch (IllegalArgumentException e) {
-                color.setRed(0);
+                System.out.println("Erreur de saisie pour la couleur rouge");
             }
             sliderRed.setValue(color.getRed());
             textFieldHex.setText(color.getRgbCode());
@@ -97,7 +97,7 @@ public class ColorPickerController implements Initializable {
                 color.setGreen(Integer.parseInt(textFieldGreen.textProperty().get()));
             }
             catch (IllegalArgumentException e) {
-                color.setGreen(0);
+                System.out.println("Erreur de saisie pour la couleur verte");
             }
             sliderGreen.setValue(color.getGreen());
             textFieldHex.setText(color.getRgbCode());
@@ -108,7 +108,7 @@ public class ColorPickerController implements Initializable {
                 color.setBlue(Integer.parseInt(textFieldBlue.textProperty().get()));
             }
             catch (IllegalArgumentException e) {
-                color.setBlue(0);
+                System.out.println("Erreur de saisie pour la couleur bleu");
             }
             sliderBlue.setValue(color.getBlue());
             textFieldHex.setText(color.getRgbCode());
@@ -120,7 +120,7 @@ public class ColorPickerController implements Initializable {
                 color.setRgbCode(textFieldHex.textProperty().get());
             }
             catch (IllegalArgumentException e) {
-                color.setRgbCode("#");
+                System.out.println("Erreur de saisie pour le code hexa");
             }
             sliderRed.setValue(color.getRed());
             sliderGreen.setValue(color.getGreen());
